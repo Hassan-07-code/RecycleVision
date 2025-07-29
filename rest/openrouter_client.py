@@ -37,7 +37,7 @@ def chat_with_openrouter(message, model="meta-llama/llama-3.3-70b-instruct:free"
         return response.json()["choices"][0]["message"]["content"]
     except httpx.HTTPStatusError as e:
         if e.response.status_code == 401:
-            return "❌ API key error. Contact the developer to fix this issue. Due to free API limitations, the bot may not work as expected."
+            return "❌ API key error. Due to free API limitations, the bot may not work as expected."
         return f"❌ API error: {e.response.status_code} - {e.response.text}"
     except httpx.RequestError as e:
         return f"⚠️ Network error: {e}"
