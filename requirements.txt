@@ -7,7 +7,7 @@ requests>=2.31.0
 matplotlib>=3.8.0
 scikit-learn>=1.3.0
 tqdm>=4.66.0
-
+httpx
 # Optional (for smoother performance or style support)
 streamlit-option-menu>=0.3.6
 streamlit-extras>=0.2.7
