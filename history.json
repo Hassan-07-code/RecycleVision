@@ -1,0 +1,47 @@
+[
+    {
+        "timestamp": "2025-07-29 11:25:04",
+        "prediction": "cardboard",
+        "confidence": 0.7502
+    },
+    {
+        "timestamp": "2025-07-29 11:35:45",
+        "prediction": "plastic",
+        "confidence": 85.59
+    },
+    {
+        "timestamp": "2025-07-29 11:37:32",
+        "prediction": "plastic",
+        "confidence": 85.59
+    },
+    {
+        "timestamp": "2025-07-29 11:40:06",
+        "prediction": "plastic",
+        "confidence": 85.59
+    },
+    {
+        "timestamp": "2025-07-29 11:40:48",
+        "prediction": "plastic",
+        "confidence": 85.59
+    },
+    {
+        "timestamp": "2025-07-29 11:44:03",
+        "prediction": "Trash",
+        "confidence": 83.56
+    },
+    {
+        "timestamp": "2025-07-29 11:44:03",
+        "prediction": "Biological",
+        "confidence": 100.0
+    },
+    {
+        "timestamp": "2025-07-29 11:44:32",
+        "prediction": "Trash",
+        "confidence": 83.56
+    },
+    {
+        "timestamp": "2025-07-29 11:44:32",
+        "prediction": "Biological",
+        "confidence": 100.0
+    }
+]

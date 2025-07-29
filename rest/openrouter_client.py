@@ -25,7 +25,7 @@ HEADERS = {
     "X-Title": "RecycleBot",
 }
 
-def chat_with_openrouter(message, model="mistralai/mistral-7b-instruct:free"):
+def chat_with_openrouter(message, model="mistralai/mistral-nemo:free"):
     body = {
         "model": model,
         "messages": [{"role": "user", "content": message}],

@@ -46,8 +46,8 @@ st.markdown("""
 – Your smart assistant for eco-friendly waste management.  
 Identify, classify, and learn about waste using AI-powered tools — all in one place.
 - 🧠 Waste Classifier
+- ☠ Mysterious
 - 🏠 Home Dashboard
-- 💬 Chatbot Assistant
 """)
 st.subheader("For proper understanding, see this video:")
 st.video("https://youtu.be/qSI22-A8dMA?si=cErqZPcqkVMBHAGS")  # video introduction

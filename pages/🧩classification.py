@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 from PIL import Image
 import os, json, sys
+from history import log_prediction, export_to_csv  # ✅ Combined import
 
 # 🔧 Path fix for multi-page import
 current_dir = os.path.dirname(os.path.abspath(__file__))         # pages/
@@ -49,6 +50,7 @@ def track_prediction(label):
 def display_prediction(img_array):
     label, confidence, emoji = predict_waste(img_array, model)
     track_prediction(label)
+    log_prediction(label, confidence)  # ✅ Log to JSON
     st.success(f"**Prediction:** {label.capitalize()} {emoji}")
     st.info(f"**Confidence:** {confidence:.2%}")
     if label in waste_details:
@@ -67,6 +69,16 @@ def show_classifier():
         st.write(f"**Total Predictions:** {st.session_state.total_predictions}")
         for category, count in st.session_state.class_counts.items():
             st.write(f"🔹 **{category.capitalize()}**: {count}")
+        # ─── Download Button ───
+        csv_path = export_to_csv()
+        if csv_path and os.path.exists(csv_path):
+            with open(csv_path, "rb") as f:
+                st.download_button(
+                    label="📥 Download History (CSV)",
+                    data=f,
+                    file_name="prediction_history.csv",
+                    mime="text/csv"
+                )
 
     mode = st.selectbox("Choose Mode:", ["Single Mode", "Batch Mode"])
     input_method = st.selectbox(
@@ -117,6 +129,7 @@ def show_classifier():
                 st.success(f"Prediction: {res['class']} {res['emoji']}")
                 st.info(f"Confidence: {res['confidence']:.2%}")
                 track_prediction(res['class'])
+                log_prediction(res['class'], res['confidence'])  # ✅ Log batch prediction
                 if "description" in res:
                     st.markdown(f"**Description:** {res['description']}")
                     st.markdown(f"**Examples:** {res['examples']}")
