@@ -21,11 +21,11 @@ BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json",
-    "HTTP-Referer": "http://localhost",  # replace with your app URL if deployed
+    "HTTP-Referer": "https://recycle-vision-by-hassan.streamlit.app/",  # replace with your app URL if deployed
     "X-Title": "RecycleBot",
 }
 
-def chat_with_openrouter(message, model="mistralai/mistral-nemo:free"):
+def chat_with_openrouter(message, model="qwen/qwen3-14b:free"):
     body = {
         "model": model,
         "messages": [{"role": "user", "content": message}],

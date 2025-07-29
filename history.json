@@ -43,5 +43,10 @@
         "timestamp": "2025-07-29 11:44:32",
         "prediction": "Biological",
         "confidence": 100.0
+    },
+    {
+        "timestamp": "2025-07-29 12:40:05",
+        "prediction": "plastic",
+        "confidence": 85.59
     }
 ]
