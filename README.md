@@ -33,7 +33,7 @@
 | Frontend    | Streamlit                          |
 | Backend     | Python, NumPy, Pillow              |
 | ML Model    | MobileNetV2 (TensorFlow / Keras)   |
-| LLM API     | OpenRouter(mistral-7b-instruct)    |     |
+| LLM API     | OpenRouter(mistralai/mistral-nemo:free)    |     |
 | Deployment  | Streamlit Cloud                    |
 | Chat Styling| Custom CSS + JS injection          |
 
