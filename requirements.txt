@@ -1,0 +1,13 @@
+streamlit>=1.34.0
+numpy>=1.24.0
+Pillow>=10.0.0
+tensorflow>=2.15.0
+opencv-python>=4.9.0.80
+requests>=2.31.0
+matplotlib>=3.8.0
+scikit-learn>=1.3.0
+tqdm>=4.66.0
+
+# Optional (for smoother performance or style support)
+streamlit-option-menu>=0.3.6
+streamlit-extras>=0.2.7
